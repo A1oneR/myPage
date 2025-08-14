@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Moon 模式介绍</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #content {
+            margin-top: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+    <!-- 引入 Marked.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tarot Moon 模式介绍</h1>
+        <div id="content"></div>
+
+        <!-- 在这里用 Markdown 格式编写你的介绍 -->
+        <textarea id="markdown-input" style="display: none;">
+# Tarot Moon V1.2
+这是一个药抗模式，有以下的特点。
+
+- 基底取自于**Zonemod 2.8.7**版本。
+- 特感复活时间调整为 **15秒**。
+- 略微提高了Tank石头的 **速度** 以及石头 **HP** （相较于包抗而言，速度更慢）。
+- 倒地手枪的精准度惩罚 **大幅度降低**。
+- 出门必刷一把 **撬棍** 与一把 **平底锅** 。
+- Witch的伤害固定调整为 **36**。
+- 添加 **鸟狙** 进入刷新池。
+- 近战只保留：草叉，撬棍，平底锅，小刀，消防斧。
+- Hunter高扑上限解锁到 **60** 伤害。
+- 移除UZI冲锋枪。
+
+
+------------
+
+|      | 伤害 |  衰减 | 射程|加衰距离|蹲伏扩散|站立扩散|移动扩散|最大扩散|
+| ---  | ---  |  --- | --- |---     |---    |---    |---     |---     |
+|Pistol|26    |0.97  |2500 |1000    |0.4    |1.1    |默认    |默认    |
+|Magnum|60    |0.92  |默认 |/       |0      |0.8    |默认    |默认    |
+|Mac   |26    |0.74  |2500 |2000    |默认   |默认   |2.34    |默认    |
+|Scout |100   |0.9   |4000 |2000    |0      |0      |1.5     |10      |
+
+|     |伤害|纵向扩散|横向扩散|
+|-----|----|-------|--------|
+|Chrome|26x9 |4.25 |5.0     |
+|Pump  |15x17|2.5  |4.0     |
+
+|      | 换弹速度 |  弹容量 |
+| ---  | ---      |  ---    |
+|Pistol|默认      |15/30    |
+|Magnum|默认      |8        |
+|Mac   |1.9       |50       |
+|Scout |2.0       |6        |
+        </textarea>
+        
+        <a href="index.html" class="back-link">&larr; 返回主页</a>
+    </div>
+
+    <script>
+      document.getElementById('content').innerHTML =
+        marked.parse(document.getElementById('markdown-input').value);
+    </script>
+</body>
+</html>

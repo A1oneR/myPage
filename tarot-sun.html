@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Sun 模式介绍</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #content {
+            margin-top: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+    <!-- 引入 Marked.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tarot Sun 模式介绍</h1>
+        <div id="content"></div>
+
+        <!-- 在这里用 Markdown 格式编写你的介绍 -->
+        <textarea id="markdown-input" style="display: none;">
+# Tarot Sun V1.2
+这是一个包抗模式，有以下的特点。
+
+- 基底取自于**Zonemod 2.8.7**版本。
+- 略微总体**提高**了特感的伤害。
+- 急救包现在固定增加 **63HP** ，不受其他因素影响。
+- 特感复活时间调整为 **14秒**。
+- 略微提高了Tank石头的 **速度** 以及石头 **HP** 。
+- 倒地手枪的精准度惩罚 **大幅度降低**。
+- 出门必刷一把 **武士刀** 与一把 **马格南手枪** 。
+- Witch的伤害固定调整为 **36**。
+- 添加 **鸟狙** 进入刷新池，爆头能够 **秒杀** 普通特感；能够对Tank造成双倍伤害。
+- 口水伤害为1,4点轮跳。
+- 血分计算更符合包抗。
+- 近战只保留：草叉，铲子，板球棒，武士刀，电吉他。
+- Hunter高扑上限解锁到 **60** 伤害。
+
+
+------------
+
+|      | 伤害 |  衰减 | 射程|加衰距离|蹲伏扩散|站立扩散|移动扩散|最大扩散|
+| ---  | ---  |  --- | --- |---     |---    |---    |---     |---     |
+|Pistol|40    |0.67  |2000 |600     |0.4    |1.1    |默认    |默认    |
+|Magnum|90    |0.72  |默认 |/       |0      |0.65   |默认    |默认    |
+|Uzi   |22    |0.74  |默认 |/       |默认   |默认   |2.25    |默认    |
+|Mac   |27    |0.66  |2500 |2000    |默认   |默认   |2.4     |默认    |
+|MP5   |34    |0.68  |4000 |1300    |0.52   |0.9   |3.05    |32.5      |
+|Scout |75    |0.9   |4000 |2000    |0      |0      |0.5     |0.0     |
++ 鸟狙爆头秒杀特感（除Tank、Witch）
+
+|     |伤害|纵向扩散|横向扩散|
+|-----|----|-------|--------|
+|Chrome|28x9 |4.25 |5.0     |
+|Pump  |17x17|2.5  |4.0     |
+
+|      | 换弹速度 |  弹容量 |
+| ---  | ---      |  ---    |
+|Pistol|默认      |15/30    |
+|Magnum|默认      |8        |
+|Uzi   |1.75      |50       |
+|Mac   |1.93      |50       |
+|MP5   |1.8       |30       |
+|Scout |默认      |10       |
+        </textarea>
+        
+        <a href="index.html" class="back-link">&larr; 返回主页</a>
+    </div>
+
+    <script>
+      document.getElementById('content').innerHTML =
+        marked.parse(document.getElementById('markdown-input').value);
+    </script>
+</body>
+</html>
