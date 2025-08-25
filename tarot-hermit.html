@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Hermit 模式介绍</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #content {
+            margin-top: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+    <!-- 引入 Marked.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tarot Hermit 模式介绍</h1>
+        <div id="content"></div>
+
+        <!-- 在这里用 Markdown 格式编写你的介绍 -->
+        <textarea id="markdown-input" style="display: none;">
+# Tarot Hermit V1.0
+
+这是一个写实包抗模式，有以下的特点。
+
+- 基底取自于**Zonemod 2.8.7**，**DRDK V1.11.4**版本。
+- 略微总体**平衡**了特感的伤害，特感的伤害频率更高，伤害更低。
+- 急救包现在固定增加 **71HP** ，不受其他因素影响。
+- 特感复活时间调整为 **16秒**。
+- 略微提高了Tank石头 **HP** 。
+- 倒地手枪的精准度惩罚 **大幅度降低**。
+- 出门必刷一把 **武士刀** 与一把 **马格南手枪** 。
+- Witch的伤害固定调整为 **24**，Witch的收尸伤害提高至 **150**（一秒收尸）。
+- 添加所有大枪（除榴弹）进入刷新池，每把武器都有相对应的调整。
+- 口水伤害为2,3点轮跳，无敌帧增加至5。
+- 血分计算更符合包抗，压缩了总体血分，血分下降曲线放缓。
+- 近战只保留：草叉，铲子，板球棒，武士刀，电吉他。
+- Hunter高扑上限解锁到 **60** 伤害。
+- 小丧尸非打头伤害由0.5倍率调整至0.65倍率。
+- 移除部分枪械秒杀小丧尸的能力，仅保留鸟狙秒杀小丧尸。
+
+---
+
+|      | 伤害 |  衰减 | 射程|加衰距离|蹲伏扩散|站立扩散|移动扩散|最大扩散|
+| ---  | ---  |  --- | --- |---     |---    |---    |---     |---     |
+|Pistol|42    |0.7  |2000 |1000     |0.4    |1.1    |默认    |默认    |
+|Magnum|90    |0.75  |默认 |/       |0      |0.65   |默认    |默认    |
+|Uzi   |23    |0.76  |默认 |/       |默认   |默认   |2.15    |默认    |
+|Mac   |28    |0.73  |2500 |2000    |默认   |默认   |2.4     |默认    |
+|MP5   |35    |0.7  |4000 |1500    |0.46   |0.87   |2.85    |30      |
+|M16   |36    |0.68  |3000 |1250    |0   |0.06   |5.85    |35      |
+|AK   |58    |0.64  |3000 |1000    |0   |0.19   |7.55    |50      |
+|SG552   |90    |0.93  |2400 |600    |0   |0.26   |6.15    |42      |
+|SCAR   |34    |0.98  |5000 |3000    |0   |0.2   |1.25    |5.5      |
+|M60   |7    |1  |7000 |/   |0   |0.06   |1    |0.25      |
+|M14   |90    |0.89  |3000 |1500    |默认  |默认   |3.76    |25      |
+|G3   |75    |0.92  |2500 |1000    |默认   |默认   |3.34    |20.5      |
+|Scout |75    |0.9   |4000 |2000    |0      |0      |0.5     |0.0     |
+|AWP |200    |0.7   |3000 |1000    |0      |0      |5.75     |35     |
+
++ 鸟狙爆头秒杀特感（除Tank、Witch）
+
+|     |伤害|纵向扩散|横向扩散|
+|-----|----|-------|--------|
+|Chrome|28x9 |4.25 |5.0     |
+|Pump  |17x17|2.5  |4.0     |
+|M1014  |13x24|9.0  |9.0     |
+|SPAS  |15x17|7.5  |7.5     |
+
+|      | 换弹速度 |  弹容量 |
+| ---  | ---      |  ---    |
+|Pistol|默认      |15/30    |
+|Magnum|默认      |8        |
+|Uzi   |1.75      |50       |
+|Mac   |1.93      |50       |
+|MP5   |1.8       |40       |
+|M16   |2.17       |40       |
+|AK   |2.24       |30       |
+|SG552   |2.47       |16       |
+|SCAR   |2.71       |36       |
+|M60   |2.49       |1000       |
+|M14   |3.01       |9       |
+|G3   |3.27       |16       |
+|Scout |2.79      |10       |
+|AWP   |3.06       |5       |
+        </textarea>
+        
+        <a href="index.html" class="back-link">&larr; 返回主页</a>
+    </div>
+
+    <script>
+      document.getElementById('content').innerHTML =
+        marked.parse(document.getElementById('markdown-input').value);
+    </script>
+</body>
+</html>
